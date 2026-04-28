@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scrape Sanfoundry MCQs</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      width: 260px;
+      padding: 16px;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    h2 {
+      font-size: 14px;
+      text-align: center;
+      margin-bottom: 14px;
+      color: #1a1a1a;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    button {
+      width: 100%;
+      padding: 9px 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
+
+    #startBtn {
+      background: #4a90e2;
+      color: white;
+    }
+
+    #downloadBtn {
+      background: #27ae60;
+      color: white;
+    }
+
+    #startBtn:hover:not(:disabled) { opacity: 0.85; }
+    #downloadBtn:hover:not(:disabled) { opacity: 0.85; }
+
+    #status {
+      margin-top: 12px;
+      font-size: 12px;
+      color: #555;
+      text-align: center;
+      min-height: 16px;
+    }
+
+    #counter {
+      margin-top: 6px;
+      font-size: 12px;
+      color: #27ae60;
+      text-align: center;
+      font-weight: 600;
+      min-height: 16px;
+    }
+
+    .credits {
+      margin-top: 14px;
+      font-size: 10px;
+      color: #aaa;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Scrape Sanfoundry MCQs</h2>
+  <div class="btn-group">
+    <button id="startBtn">▶ Start Processing</button>
+    <button id="downloadBtn" disabled>⬇ Bulk Download</button>
+  </div>
+  <div id="status">Navigate to a Sanfoundry MCQ page to begin.</div>
+  <div id="counter"></div>
+  <p class="credits">Designed and Developed by ZORODU</p>
+  <script src="popup.js"></script>
+</body>
+</html>
